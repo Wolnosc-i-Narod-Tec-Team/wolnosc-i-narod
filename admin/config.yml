@@ -1,0 +1,42 @@
+# Konfiguracja Decap CMS dla Wolności i Narodu
+backend:
+  name: github
+  repo: Sojerowak/wolnosc-i-narod
+  branch: main # lub main, jesli masz taką nazwę gałęzi
+
+# Nazwa i logo panelu
+site_url: https://wolnoscinarod.pl
+logo_url: https://wolnoscinarod.pl/img/wolnosc_i_narod_orzel.png
+
+# Język panelu
+locale: pl
+
+# Media (obrazki) – gdzie je zapisać
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+
+# Kolekcje (co chcemy edytować)
+collections:
+  # 1. Artykuły / Aktualności
+  - name: "aktualnosci"
+    label: "Aktualności"
+    folder: "posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Tytuł", name: "title", widget: "string" }
+      - { label: "Data publikacji", name: "date", widget: "datetime" }
+      - { label: "Autor", name: "author", widget: "string", default: "Redakcja" }
+      - { label: "Obraz główny", name: "image", widget: "image", required: false }
+      - { label: "Treść", name: "body", widget: "markdown" } # Można też użyć "editor" dla HTML-a
+
+  # 2. Strony podstawowe (opcjonalne, jeżeli chcesz edytować np. index.html lub o-nas.html)
+  # - name: "pages"
+  #   label: "Strony statyczne"
+  #   files:
+  #     - file: "index.html"
+  #       label: "Strona główna"
+  #       name: "home"
+  #       fields:
+  #         - { label: "Tytuł", name: "title", widget: "string" }
+  #         - { label: "Treść", name: "body", widget: "markdown" }
