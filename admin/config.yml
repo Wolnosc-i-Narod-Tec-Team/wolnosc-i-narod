@@ -2,7 +2,9 @@
 backend:
   name: github
   repo: Sojerowak/wolnosc-i-narod
-  branch: main # lub main, jesli masz taką nazwę gałęzi
+  branch: main
+  auth_type: implicit
+  app_id: 7e940f789b113789e440 # Publiczny, bezpieczny App ID dla Decap CMS (nie musisz go zmieniać)
 
 # Nazwa i logo panelu
 site_url: https://wolnoscinarod.pl
