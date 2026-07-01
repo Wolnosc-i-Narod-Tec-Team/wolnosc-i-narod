@@ -1,10 +1,10 @@
-# Konfiguracja Decap CMS dla Wolności i Narodu
+# Konfiguracja Decap CMS dla Wolności i Narodu (BEZPEKNA WERSJA)
 backend:
   name: github
   repo: Sojerowak/wolnosc-i-narod
   branch: main
   auth_type: implicit
-  app_id: 7e940f789b113789e440 # Publiczny, bezpieczny App ID dla Decap CMS (nie musisz go zmieniać)
+  app_id: 0a62c640d69a8d0697a3 # Publiczne Community App ID Decap CMS – BEZPEKNE!
 
 # Nazwa i logo panelu
 site_url: https://wolnoscinarod.pl
@@ -30,15 +30,4 @@ collections:
       - { label: "Data publikacji", name: "date", widget: "datetime" }
       - { label: "Autor", name: "author", widget: "string", default: "Redakcja" }
       - { label: "Obraz główny", name: "image", widget: "image", required: false }
-      - { label: "Treść", name: "body", widget: "markdown" } # Można też użyć "editor" dla HTML-a
-
-  # 2. Strony podstawowe (opcjonalne, jeżeli chcesz edytować np. index.html lub o-nas.html)
-  # - name: "pages"
-  #   label: "Strony statyczne"
-  #   files:
-  #     - file: "index.html"
-  #       label: "Strona główna"
-  #       name: "home"
-  #       fields:
-  #         - { label: "Tytuł", name: "title", widget: "string" }
-  #         - { label: "Treść", name: "body", widget: "markdown" }
+      - { label: "Treść", name: "body", widget: "markdown" }
